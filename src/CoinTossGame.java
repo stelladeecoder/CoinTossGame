@@ -3,10 +3,15 @@ import java.util.concurrent.Callable;
 
 public class CoinTossGame {
 
-    public int tossACoin() {
+    public String tossACoin() {
         Random rand = new Random();
         int toss = Math.abs(rand.nextInt()) % 2;
-        return toss;
+        if (toss == 0) {
+            return "Heads";
+        } else {
+            return "Tails";
+        }
+
     }
 
 
